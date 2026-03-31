@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #2e343b;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: #fff
+}
+
+a:visited {
+  color: #fff
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: transparent;
+  padding: 20px 30px 30px 30px;
+}
+
+.container div {
+  margin: 10px 0;
+}
+
+.container .title h1 {
+  font-weight: normal;
+  font-size: 2em;
+}
+
+.container .title small {
+  font-style: italic;
+}
+
+.container div.medias {
+  display: flex;
+  margin: 20px 0;
+}
+
+.medias a {
+  display: block;
+}
+
+.medias a svg {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  transition: 300ms all ease-in-out;
+}
+
+.medias a svg:hover {
+  color: #fff;
+  filter:drop-shadow(0 0 2px #ACACAC)
+}
+
+svg > .icon-path {
+  fill: #fff;
+}
+
+.box {
+  width: 300px;
+  margin: 50px auto;
+  background: #292929;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 15px;
+  position: relative;
+}
+
+.sb:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #292929;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #292929;
+  border-bottom: 10px solid transparent;
+  right: 8px;
+  top: -19px;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 500px) {
+  div.title {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+  }
+
+  div.title h1 span.block {
+    display: flex;
+  }
+
+  .medias a svg {
+    color: #fff;
+    filter:drop-shadow(0 0 2px #ACACAC)
+  }
+
+  div.container .medias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sb:before {
+    right: 100px;
+    top: -19px;
+  }
+}
+
+.certificates {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.certificates .title {
+  text-align: center;
+}
+
+.certificates .title h2 {
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: 14px;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #1f252c;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #111;
+}
+
+.certificate-info {
+  padding: 12px 14px 14px 14px;
+}
+
+.certificate-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 0.75em;
+  line-height: 1.3;
+}
+
+.certificate-info p {
+  margin: 0;
+  font-size: 0.68em;
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-card img {
+    height: 170px;
+  }
+}
